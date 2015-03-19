@@ -74,3 +74,5 @@ for(i in 1:subjectLen) {
 head(meanData)
 dim(meanData)#180*68
 write.table(meanData, "data_with_means.txt")
+
+data<-read.table("./data/data_with_means.txt")

@@ -11,6 +11,7 @@ This CodeBook will describe the variables, the data, and any transformations or 
       ```       
       read.table()
       rbind()
+      
       ```
     * Training and testing sets are read in this step:   
       ```
@@ -21,8 +22,17 @@ This CodeBook will describe the variables, the data, and any transformations or 
     * Merge training and testing sets to create one data set:
       ```
       mergedData | mergedLabels | mergedSubject
+      
       ```
  2. The second step is to extract only the measurements on the mean and standard deviation for each measurement.
-    *Rstudio commands used in this step:
-     ```
-        
+    * Rstudio commands used in this step:
+      ```
+      read.table() | grep() | tolower() | gsub() | names()
+      
+      ```
+    * Variables generated in this step:
+      ```
+      features: read from features.txt.
+      meandSDindices: a set of numeric values contains the identification number of the desired variable in the mergedData set, which are the measurements on the mean and standard deviation for each measurement.
+      ```
+    * use ```tolower() & gsub()``` to give ```feature``` a clean look, then assign it as the names of ```MergedData```.   

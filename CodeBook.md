@@ -12,9 +12,17 @@ This CodeBook will describe the variables, the data, and any transformations or 
       read.table()
       rbind()
       ```
-    * Data are generated in this step:   
+    * Training and testing sets are read in this step:   
       ```
-      #Data              #Describtion                 #Command Used
+      trianData | trainLabels | trainSubject
+      testData  | testLabels  | testSubject
        
       ```
-       
+    * Merge training and testing sets to create one data set:
+      ```
+      mergedData | mergedLabels | mergedSubject
+      ```
+ 2. The second step is to extract only the measurements on the mean and standard deviation for each measurement.
+    *Rstudio commands used in this step:
+     ```
+        
